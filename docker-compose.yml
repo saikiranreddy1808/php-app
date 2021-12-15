@@ -4,13 +4,13 @@ services:
      image: saikiranreddy1808/java-mvn-privaterepos:php
      ports:
      - "8001:80"
-     depends-on:
+     depends_on:
      - mysql
     mysql:
      image: saikiranreddy1808/java-mvn-privaterepos:sql
      environment:
-     MY_SQLROOT_PASSWORD: password
+        MY_SQLROOT_PASSWORD: password
      volumes:
-     - db_data: /var/lib/mysql
-    volumes:
-      db_data: {}   
+     - db_data:/var/lib/mysql
+volumes:
+  db_data: {}   
