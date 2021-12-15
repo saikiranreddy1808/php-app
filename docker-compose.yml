@@ -9,7 +9,7 @@ services:
     mysql:
      image: saikiranreddy1808/java-mvn-privaterepos:sql
      environment:
-        MY_SQLROOT_PASSWORD: password
+        MY_SQL_ROOT_PASSWORD: password
      volumes:
      - db_data:/var/lib/mysql
 volumes:
